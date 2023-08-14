@@ -122,7 +122,7 @@
     clippy::arithmetic_side_effects,
     clippy::indexing_slicing,
 ))]
-#![cfg_attr(not(test), no_std)]
+#![cfg_attr(all(not(test), not(fuzzing)), no_std)]
 #![cfg_attr(feature = "simd-nightly", feature(stdsimd))]
 
 pub mod byteorder;
