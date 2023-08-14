@@ -179,7 +179,7 @@ example of how it can be used for parsing UDP packets.
 [`FromBytes`]: crate::FromBytes
 [`AsBytes`]: crate::AsBytes
 [`Unaligned`]: crate::Unaligned"),
-            #[derive(FromBytes, AsBytes, Unaligned, Copy, Clone, Eq, PartialEq, Hash)]
+            #[derive(FromBytes, AsBytes, Unaligned, Copy, Clone, Eq, PartialEq, Hash, arbitrary::Arbitrary)]
             #[repr(transparent)]
             pub struct $name<O>([u8; $bytes], PhantomData<O>);
         }
